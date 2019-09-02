@@ -1,7 +1,8 @@
 import os
 import sys
 
-sys.version
+print(sys.version)
+print(os.path.dirname(sys.executable))
 
 print(os.environ)
 help("modules")
