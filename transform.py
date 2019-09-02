@@ -66,6 +66,6 @@ print(grid_search.best_params_, grid_search.best_score_)
 
 y_pred = grid_search.best_estimator_.predict_proba(X_test)
 
-print(f"Test set AUC: {roc_auc_score(y_true=y_test, y_score=y_pred[:,1])}")
+print("Test set AUC: ", roc_auc_score(y_true=y_test, y_score=y_pred[:,1]))
 
 print("Done")
