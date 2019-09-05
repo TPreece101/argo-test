@@ -80,7 +80,9 @@ print(grid_search.best_params_, grid_search.best_score_)
 y_pred = grid_search.best_estimator_.predict_proba(X_test)
 
 auc = roc_auc_score(y_true=y_test, y_score=y_pred[:,1])
-print(auc)
+# dump AUC to file
+with open('/tmp/auc.txt', 'w') as file:
+    file.write(str(auc))
 
 print("Test set AUC: ", roc_auc_score(y_true=y_test, y_score=y_pred[:,1]))
 
